@@ -23,7 +23,7 @@ public class HelloWorld {
         //8.
         myNumber = 123;
         //9.
-        float myNumber = (float) 3.14F;
+//        float myNumber = (float) 3.14F;
         //10.
         int x = 5;
         System.out.println(x++);
