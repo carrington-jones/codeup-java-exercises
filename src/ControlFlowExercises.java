@@ -13,6 +13,7 @@ public class ControlFlowExercises {
 //            i += 2;
 //            System.out.println(i);
 //        } while(i < 100);
+//
 //        i = 100;
 //        do {
 //            i -= 5;
@@ -37,27 +38,26 @@ public class ControlFlowExercises {
 //                System.out.println(f);
 //            }
 //        }
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give me a number!");
-        int num = scanner.nextInt();
-        System.out.println("I have a table ready. Would you like to continue?");
-        String tableAnswer = scanner.next().toLowerCase();
-        if (tableAnswer.equals("yes")) {
-            System.out.println("Here is your table!\nnumber | squared | cubed\n-----  |  -----  | -----\n");
-            for (i = 1; i <= num; i++) {
-                System.out.println(i + "      | " + (i * i) + "     |" + (i * i * i) + "    ");
-            }
-        } if (tableAnswer.equals("no")){
-            System.out.println("Okay, goodbye!");
-        }
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Give me a number!");
+//        int num = scanner.nextInt();
+//        System.out.println("I have a table ready. Would you like to continue?");
+//        String tableAnswer = scanner.next().toLowerCase();
+//        if (tableAnswer.equals("yes")) {
+//            System.out.println("Here is your table!\nnumber | squared | cubed\n-----  |  -----  | -----\n");
+//            for (int i = 1; i <= num; i++) {
+//                System.out.println(i + "      | " + (i * i) + "     |" + (i * i * i) + "    ");
+//            }
+//        } if (tableAnswer.equals("no")){
 //            System.out.println("Okay, goodbye!");
+//        }
 //        System.out.println("What was your grade?");
 //        int grade = scanner.nextInt();
 //        System.out.println("Your grade is " + grade);
 //        System.out.println("Would you like to continue to see your grade?");
 //        String gradeAnswer = scanner.next().toLowerCase();
-//        if (gradeAnswer.equals("Yes")) {
+//        if (gradeAnswer.equals("yes")) {
 //            if (grade >= 88) {
 //                System.out.println("Congrats! You got an A!");
 //            } else if (grade >= 80) {
@@ -69,7 +69,7 @@ public class ControlFlowExercises {
 //            } else {
 //                System.out.println("Congrats! You got an F!");
 //            }
-//        } if (gradeAnswer.equals("No")){
+//        } if (gradeAnswer.equals("no")){
 //            System.out.println("Okay, goodbye!");
 //        }
 
@@ -88,7 +88,7 @@ Please enter pin:
 Output:
 Correct, welcome back.
  */
-//        int correctpin = 12345;
+//        final int correctpin = 12345;
 //        for (int x = 3, y = 2; x > 0; x--) {
 //            System.out.println("Please enter your pin");
 //            int num = scanner.nextInt();
