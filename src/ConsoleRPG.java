@@ -30,15 +30,44 @@ public class ConsoleRPG {
             System.out.println("You have encountered an orc! Attack or run away?");
             String userOrcAttack = scanner.nextLine();
             //code for orc fight
+            if (userOrcAttack.equalsIgnoreCase("attack")) {
+                orcFight();
+                System.out.println("Would you like to drink a potion to replenish your health?");
+                String afterOrcPotionInput = scanner.next();
+                if (afterOrcPotionInput.equalsIgnoreCase("Yes")) {
+                    drinkPotion();
+                }
+            }
         }
         if (userLeftOrRight1.equalsIgnoreCase("right")) {
             System.out.println("You have encountered a rogue! Attack or run away?");
-            String userOrcAttack = scanner.nextLine();
+            String userRogueAttack = scanner.nextLine();
             //code for rogue fight
+            if (userRogueAttack.equalsIgnoreCase("attack")) {
+
+            }
         }
 
     }
 
+    public static void orcFight() {
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 25; orcStartingHealth > 0; i -= 10) {
+            System.out.println("You have attacked the Orc! You did 10 damage! The Orc now has " + (orcStartingHealth - 10) + " health!");
+            orcStartingHealth -= 10;
+            if (orcStartingHealth <= 0) {
+                System.out.println("You have defeated the orc!");
+                break;
+            }
+            System.out.println("The orc has attacked you! It did 10 damage! You now have " + (heroStartingHealth - 10) + " health!");
+            heroStartingHealth -= 10;
+
+        }
+        System.out.println("Congrats on your victory! You currently have " + heroStartingHealth + " health.");
+    }
+
+
+    //this method replenishes hero's health
     public static int potionCountStart = 3;
 
     public static void drinkPotion() {
@@ -47,6 +76,7 @@ public class ConsoleRPG {
         } else {
             potionCountStart--;
             System.out.println("You drank a potion! Your health is now " + (heroStartingHealth + 25) + " You have " + potionCountStart + " remaining");
+            heroStartingHealth += 25;
         }
 
     }
@@ -63,7 +93,6 @@ public class ConsoleRPG {
     //main methods
     public static void main(String[] args) {
         begin();
-        System.out.println(heroStartingHealth);
-        drinkPotion();
+//        drinkPotion();
     }
 }
