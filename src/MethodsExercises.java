@@ -42,35 +42,35 @@ public class MethodsExercises {
     }
 
     //        Create a method that validates that user input is in a certain range
-//    public static int getInteger(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//        int userInput = scanner.nextInt();
-//        if (userInput < max && userInput > min) {
-//            System.out.println("Good Job!");
-//        } else {
-//            System.out.println("Please try again!");
-//            getInteger(min, max);
-//        }
-//        return userInput;
-//    }
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+        if (userInput < max && userInput > min) {
+            System.out.println("Good Job!");
+        } else {
+            System.out.println("Please try again!");
+            getInteger(min, max);
+        }
+        return userInput;
+    }
 
 //    Calculate the factorial of a number.
 
-//    public static void Factorial(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.printf("Enter a number between %d and %d: ", min, max);
-//        long userInput2 = Long.parseLong(scanner.nextLine());
-//        System.out.printf("You entered %d. Do you wish to see the factorial? Yes/No%n", userInput2);
-//        String confirm = scanner.nextLine();
-//        if (confirm.equalsIgnoreCase("yes")) {
-//            System.out.printf("Your number was %d! %d x", userInput2, userInput2);
-//            for (long i = userInput2 - 1; i > 1; i--) {
-//                System.out.printf(" %d x", i);
-//                userInput2 *= i;
-//            }
-//            System.out.printf(" 1 = %d", userInput2);
-//        }
-//    }
+    public static void Factorial(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Enter a number between %d and %d: %n", min, max);
+        long userInput2 = Long.parseLong(scanner.nextLine());
+        System.out.printf("You entered %d. Do you wish to see the factorial? Yes/No%n", userInput2);
+        String confirm = scanner.nextLine();
+        if (confirm.equalsIgnoreCase("yes")) {
+            System.out.printf("Your number was %d! %d x", userInput2, userInput2);
+            for (long i = userInput2 - 1; i > 1; i--) {
+                System.out.printf(" %d x", i);
+                userInput2 *= i;
+            }
+            System.out.printf(" 1 = %d", userInput2);
+        }
+    }
 
     //    Create an application that simulates dice rolling
     public static void diceGame() {
@@ -80,17 +80,17 @@ public class MethodsExercises {
         System.out.printf("%nHow many side on the second dice?%n");
         int userInput4 = scanner.nextInt();
         System.out.println("When you are ready please type \"roll\" to roll the dice.");
-        String userDiceConfrim = scanner.next();
-        if (userDiceConfrim.equalsIgnoreCase("roll")) {
+        String userDiceConfirm = scanner.next();
+        if (userDiceConfirm.equalsIgnoreCase("roll")) {
             int diceRoll1 = (int) (Math.random() * userInput3 + 1);
             int diceRoll2 = (int) (Math.random() * userInput4 + 1);
             System.out.printf("You rolled %d and %d!", diceRoll1, diceRoll2);
             System.out.println(" Would you like to roll the dice again?");
             String userConfirm2ndRoll = scanner.next();
             if (userConfirm2ndRoll.equalsIgnoreCase("yes")) {
-                int diceRoll3 = (int) (Math.random() * userInput3 + 1);
-                int diceRoll4 = (int) (Math.random() * userInput4 + 1);
-                System.out.printf("You rolled %d and %d!", diceRoll3, diceRoll4);
+                diceGame();
+            } else {
+                System.out.println("Okay. Goodbye!");
             }
         } else {
             System.out.println("Okay. Goodbye!");
