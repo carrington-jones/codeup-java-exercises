@@ -14,7 +14,7 @@ public class JavaStringsLecture {
 
         //Comparing start and end of strings
         String carrington = "Carrington";
-        String car = "Car";
+        String car = "objectOrientedProgrammingLecture.Car";
         String firstletterCarrington = "" + carrington.charAt(0);
         System.out.println("Carrington and car start with the same letter?: " + car.startsWith(firstletterCarrington));
 
