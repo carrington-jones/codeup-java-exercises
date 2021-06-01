@@ -32,6 +32,13 @@ public class User {
     public User() {
     }
 
+    public void describeUser(){
+        System.out.println("Username: " + this.username);
+        System.out.println("Password: " + this.password);
+        System.out.println("Email: " + this.email);
+        System.out.println("Logged in?" + this.isLoggedIn);
+    }
+
     public static void main(String[] args) {
         User testUser = new User();
         testUser.id = 1;
