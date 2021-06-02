@@ -27,7 +27,7 @@ public class Input {
         System.out.println("Yes/No");
         String userInput2 = scanner.nextLine();
         System.out.println("You said " + userInput2);
-        if (userInput2.equalsIgnoreCase("yes")) {
+        if (userInput2.equalsIgnoreCase("yes") || userInput2.equalsIgnoreCase("y")) {
             return true;
         } else {
             return false;
