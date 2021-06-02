@@ -1,10 +1,6 @@
 public class Person {
     private String personName;
 
-    public Person(String name) {
-        personName = name;
-    }
-
     public String getName() {
 //TODO: return the person's name
         return this.personName;
@@ -20,22 +16,18 @@ public class Person {
         System.out.println("Hello from " + personName);
     }
 
+    //TODO: The class should have a constructor that accepts a `String` value and sets
+    //the person's name to the passed string.
+    public Person (String name){
+        this.personName = name;
+    }
 
     public static void main(String[] args) {
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
-//        System.out.println(person1.getName().equals(person2.getName()));
-//        System.out.println(person1 == person2);
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
-//        System.out.println(person1 == person2);
-
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
-        person2.setName("Jane");
-        System.out.println(person1.getName());
-        System.out.println(person2.getName());
+        //THIS IS TESTING CONSTRUCTOR
+        Person p = new Person("Rudy");
+        System.out.println(p.getName());
+        p.setName("Rudolph");
+        System.out.println(p.getName());
+        p.sayHello();
     }
 }
