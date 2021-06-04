@@ -12,11 +12,15 @@ public class ApplianceTest {
 
         Fridge app1 = new Fridge("two door", "LG", true);
 
-        System.out.println(app1.brandName);
-        System.out.println(app1.type);
-        System.out.println(app1.isHasIce());
-        app1.sayHello();
-        app1.keepFresh();
+//        System.out.println(app1.brandName);
+//        System.out.println(app1.type);
+//        System.out.println(app1.isHasIce());
+//        app1.sayHello();
+//        app1.keepFresh();
+
+        IceChest ichest = new IceChest();
+
+        ichest.keepFresh();
 
     }
 }

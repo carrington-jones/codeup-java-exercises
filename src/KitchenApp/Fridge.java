@@ -2,7 +2,17 @@ package KitchenApp;
 
 import java.util.Scanner;
 
-public class Fridge extends Appliance{
+public class Fridge extends Appliance implements StoreFood {
+    public boolean hasShelves;
+
+
+    public boolean isHasShelves() {
+        return hasShelves;
+    }
+
+    public void setHasShelves(boolean hasShelves) {
+        this.hasShelves = hasShelves;
+    }
 
     private boolean hasIce;
 
