@@ -13,4 +13,8 @@ public class Duck extends Bird {
         System.out.println(this.getName() + " goes Quack Quack!");
     }
 
+    public void setName(String duckName){
+        super.setName(duckName);
+    }
+
 }

@@ -6,4 +6,12 @@ public class Square extends Rectangle{
         super(side, side);
     }
 
+    public int getArea(){
+    return (int) (Math.pow(this.length, 2)); //this.length is inherited from Rectangle class because of extends
+    }
+
+    public int getPerimeter(){
+    return 4 * this.length;
+    }
+
 }

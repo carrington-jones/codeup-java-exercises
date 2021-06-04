@@ -29,5 +29,9 @@ public class BirdTest {
 
 
         Finch houseFinch = new Finch();
+
+        Duck rubberDucky = new Duck();
+        rubberDucky.setName("Cody");
+        System.out.println(rubberDucky.getName());
     }
 }

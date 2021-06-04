@@ -15,7 +15,8 @@ public class Bird {
     }
 
     //what kind of bird?
-    private String name;
+    //The protected access modifier is like private, but not just for the class this instance variable is in also for all its subclasses. Only the class it's in or subclasses of the class it's in can access this variable.
+    protected String name;
 
     public String getName() {
         return name;
