@@ -1,10 +1,20 @@
 package shapes;
 
-abstract class Square extends Quadrilateral{
+public class Square extends Quadrilateral{
     public Square(double length, double width) {
         super(length, width);
     }
 
+    public double getArea(){
+        return length * length;
+    }
+
+    public double getPerimeter(){
+        return 4 * length;
+    }
+
+
+    //---OLD EXERCISE---//
 //    public Square (int side){
 //        super(side, side);
 //    }

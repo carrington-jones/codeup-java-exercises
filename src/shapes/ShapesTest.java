@@ -15,5 +15,14 @@ public class ShapesTest {
 
         //----Start of Interfaces and Abstract Classes Exercises----//
 
+        Measurable myShape = new Rectangle(5, 10);
+        Measurable myShape2 = new Square(5, 5);
+
+        System.out.println("Your area is " + myShape.getArea());
+        System.out.println("Your perimeter is " + myShape.getPerimeter());
+
+        System.out.println("Your area is " + myShape2.getArea());
+        System.out.println("Your perimeter is " + myShape2.getPerimeter());
+
     }
 }
