@@ -5,6 +5,16 @@ public class Rectangle extends Quadrilateral implements Measurable{
         super(length, width);
     }
 
+    @Override
+    public void setLength(double length) {
+
+    }
+
+    @Override
+    public void setWidth(double width) {
+
+    }
+
     public double getArea(){
         return length * width;
     }
