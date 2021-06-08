@@ -9,7 +9,7 @@ public class Student {
 
     public Student(String studentName) {
         this.studentName = studentName;
-        this.gradeArrayList = new ArrayList<>();
+        this.gradeArrayList = new ArrayList<>();//Each student takes in array list
     }
 
     public String getStudentName() {
@@ -33,31 +33,29 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> carringtonGrades = new ArrayList<>();
+
         Student Carrington = new Student("Carrington");
-        carringtonGrades.add(90);
-        carringtonGrades.add(93);
-        carringtonGrades.add(95);
-        carringtonGrades.add(100);
-        System.out.println(carringtonGrades);
+        Carrington.addGrade(90);
+        Carrington.addGrade(93);
+        Carrington.addGrade(95);
+        Carrington.addGrade(100);
+        System.out.println(Carrington.getGrade());
         System.out.println(Carrington.getGradeAverage());
 
-        ArrayList<Integer> markGrades = new ArrayList<>();
         Student Mark = new Student("Mark");
-        markGrades.add(80);
-        markGrades.add(82);
-        markGrades.add(85);
-        markGrades.add(89);
-        System.out.println(markGrades);
+        Mark.addGrade(80);
+        Mark.addGrade(82);
+        Mark.addGrade(85);
+        Mark.addGrade(89);
+        System.out.println(Mark.getGrade());
         System.out.println(Mark.getGradeAverage());
 
-        ArrayList<Integer> LeoGrades = new ArrayList<>();
         Student Leo = new Student("Leo");
-        LeoGrades.add(70);
-        LeoGrades.add(45);
-        LeoGrades.add(81);
-        LeoGrades.add(94);
-        System.out.println(LeoGrades);
+        Leo.addGrade(70);
+        Leo.addGrade(45);
+        Leo.addGrade(81);
+        Leo.addGrade(94);
+        System.out.println(Leo.getGrade());
         System.out.println(Leo.getGradeAverage());
     }
 }

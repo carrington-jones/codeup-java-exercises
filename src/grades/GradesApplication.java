@@ -1,21 +1,18 @@
 package grades;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
-        HashMap<String, Student> students = new HashMap<>();
-        ArrayList<Integer> carringtonGrades1 = new ArrayList<>();
+        HashMap<String, Student> students = new HashMap<>(); //HashMap that takes in a string and student object.
         Student Carrington1 = new Student("Carrington1");
-        Carrington1.addGrade(90);
+        Carrington1.addGrade(90); //grades from Student Class
         Carrington1.addGrade(93);
         Carrington1.addGrade(95);
         Carrington1.addGrade(100);
         students.put("CJ1234", Carrington1);
 
-        ArrayList<Integer> DavidGrades = new ArrayList<>();
         Student David = new Student("David");
         David.addGrade(85);
         David.addGrade(83);
@@ -23,7 +20,6 @@ public class GradesApplication {
         David.addGrade(89);
         students.put("DavidDavid5678", David);
 
-        ArrayList<Integer> JaysGrades = new ArrayList<>();
         Student Jay = new Student("Jay");
         Jay.addGrade(79);
         Jay.addGrade(78);
@@ -31,7 +27,6 @@ public class GradesApplication {
         Jay.addGrade(76);
         students.put("JA9876 ", Jay);
 
-        ArrayList<Integer> JavierGrades = new ArrayList<>();
         Student Javier = new Student("Javier");
         Javier.addGrade(110);
         Javier.addGrade(108);
@@ -40,7 +35,7 @@ public class GradesApplication {
         students.put("Javier2468", Javier);
 
         System.out.println("Welcome!\nHere are the GitHub usernames of our students:\n");
-        for (String gitHubUserNames : students.keySet()) {
+        for (String gitHubUserNames : students.keySet()) { //This for loop prints out the key names from the HashMap using keySet.
             System.out.print(gitHubUserNames + " ");
         }
 
@@ -55,7 +50,7 @@ public class GradesApplication {
                 System.out.println("We do not have this user in our system");
             }
             if (students.containsKey(userGitHub)) {
-                System.out.println("Name: " + students.get(userGitHub).getStudentName() + " - GitHub Username: " + userGitHub + "\nCurrentAverage: " + students.get(userGitHub).getGradeAverage());
+                System.out.println("Name: " + students.get(userGitHub).getStudentName() + " - GitHub Username: " + userGitHub + "\nCurrentAverage: " + students.get(userGitHub).getGradeAverage()); //This Sout uses methods from student class.
                 System.out.println("Would you like to see all grades from this student? Yes/No");
                 String userAnswerAllGrades = scanner.nextLine();
                 if(userAnswerAllGrades.equalsIgnoreCase("yes")){
@@ -66,11 +61,8 @@ public class GradesApplication {
                 if(!userAnswer.equalsIgnoreCase("yes")) { //When user types no the while becomes false.
                     userconfirm = false;
                 }
-//                for (String gitHubUserNames : students.keySet()) { //This for loop gives user the Github names again. Need to figure out how to not run when user says no
-//                    System.out.print(gitHubUserNames + " ");
-//                }
             }
-        } while(userconfirm);
+        } while(userconfirm); //do while stops if user says they would not like to see another student.
 
 
           //Attempt at bonus//
