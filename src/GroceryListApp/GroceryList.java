@@ -2,8 +2,10 @@ package GroceryListApp;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import util.Input;
 
 public class GroceryList {
+    public static Input input = new Input();
     Scanner scanner = new Scanner(System.in);
     public static ArrayList<String> BigGroceryList = new ArrayList<>();
     public static ArrayList<String> GroceryListProduce = new ArrayList<>();
@@ -14,9 +16,9 @@ public class GroceryList {
 
     public static void begin() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Would you like to start creating your grocery list?");
-        String userInputBegin = scanner.nextLine();
-        if (userInputBegin.equalsIgnoreCase("yes") || userInputBegin.equalsIgnoreCase("y")) {
+
+        boolean createList = input.yesNo("Would you like to start creating your grocery list?");
+        if (createList) {
             addItem();
         }
     }
@@ -43,16 +45,15 @@ public class GroceryList {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What item would you like to add to the list?");
         String addGroceryItem = scanner.nextLine();
-        System.out.println("How many " + addGroceryItem + "s would you like to add?");
+        System.out.println("How many " + addGroceryItem + " would you like to add?");
         int addProduceNumber = scanner.nextInt();
         for (int i = 0; i < addProduceNumber; i++) {
             GroceryListProduce.add(addGroceryItem);
             BigGroceryList.add(addGroceryItem);
         }
         System.out.println("Here is your produce list " + GroceryListProduce);
-        System.out.println("Would you like to add another item?");
-        String userconfirm = scanner.next();
-        if (userconfirm.equalsIgnoreCase("yes") || userconfirm.equalsIgnoreCase("y")) {
+        boolean addProduceItem = input.yesNo("Would you like to add another item?");
+        if (addProduceItem) {
             addItem();
         } else {
             System.out.println("Okay here is your final grocery list!");
@@ -65,16 +66,15 @@ public class GroceryList {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What item would you like to add to the list?");
         String addGroceryItem = scanner.nextLine();
-        System.out.println("How many " + addGroceryItem + "s would you like to add?");
+        System.out.println("How many " + addGroceryItem + " would you like to add?");
         int addBakeryNumber = scanner.nextInt();
         for (int i = 0; i < addBakeryNumber; i++) {
             GroceryListBakery.add(addGroceryItem);
             BigGroceryList.add(addGroceryItem);
         }
         System.out.println("Here is your bakery list " + GroceryListBakery);
-        System.out.println("Would you like to add another item?");
-        String userconfirm = scanner.next();
-        if (userconfirm.equalsIgnoreCase("yes") || userconfirm.equalsIgnoreCase("y")) {
+        boolean addBakeryItem = input.yesNo("Would you like to add another item?");
+        if (addBakeryItem) {
             addItem();
         } else {
             System.out.println("Okay here is your final grocery list!");
@@ -86,16 +86,15 @@ public class GroceryList {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What item would you like to add to the list?");
         String addGroceryItem = scanner.nextLine();
-        System.out.println("How many " + addGroceryItem + "s would you like to add?");
+        System.out.println("How many " + addGroceryItem + " would you like to add?");
         int addDessertNumber = scanner.nextInt();
         for (int i = 0; i < addDessertNumber; i++) {
             GroceryListDessert.add(addGroceryItem);
             BigGroceryList.add(addGroceryItem);
         }
         System.out.println("Here is your dessert list " + GroceryListDessert);
-        System.out.println("Would you like to add another item?");
-        String userconfirm = scanner.next();
-        if (userconfirm.equalsIgnoreCase("yes") || userconfirm.equalsIgnoreCase("y")) {
+        boolean addDessertItem = input.yesNo("Would you like to add another item?");
+        if (addDessertItem) {
             addItem();
         } else {
             System.out.println("Okay here is your final grocery list!");
@@ -107,16 +106,15 @@ public class GroceryList {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What item would you like to add to the list?");
         String addGroceryItem = scanner.nextLine();
-        System.out.println("How many " + addGroceryItem + "s would you like to add?");
+        System.out.println("How many " + addGroceryItem + " would you like to add?");
         int addDrinksNumber = scanner.nextInt();
         for (int i = 0; i < addDrinksNumber; i++) {
             GroceryListDrinks.add(addGroceryItem);
             BigGroceryList.add(addGroceryItem);
         }
         System.out.println("Here is your drinks list " + GroceryListDrinks);
-        System.out.println("Would you like to add another item?");
-        String userconfirm = scanner.next();
-        if (userconfirm.equalsIgnoreCase("yes") || userconfirm.equalsIgnoreCase("y")) {
+        boolean addDrinksItem = input.yesNo("Would you like to add another item?");
+        if (addDrinksItem) {
             addItem();
         } else {
             System.out.println("Okay here is your final grocery list!");

@@ -23,10 +23,9 @@ public class Input {
         return userInputPrompt2;
     }
 
-    public boolean yesNo() {
-        System.out.println("Yes/No");
+    public boolean yesNo(String s) {
+        System.out.println(s);
         String userInput2 = scanner.nextLine();
-        System.out.println("You said " + userInput2);
         if (userInput2.equalsIgnoreCase("yes") || userInput2.equalsIgnoreCase("y")) {
             return true;
         } else {

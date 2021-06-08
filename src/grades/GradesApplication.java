@@ -40,15 +40,48 @@ public class GradesApplication {
         students.put("Javier2468", Javier);
 
         System.out.println("Welcome!\nHere are the GitHub usernames of our students:\n");
-    for(String gitHubUserNames : students.keySet()){
-        System.out.print(gitHubUserNames+" ");
-    }
-        System.out.println("\n\nWhat student would you like to see more information on?");
-        Scanner scanner = new Scanner(System.in);
-        String userGitHub = scanner.nextLine();
-        if(students.containsKey(userGitHub)){
-            System.out.println("Name: " + students.get(userGitHub).getStudentName() + " - GitHub Username: " + userGitHub + "\nCurrentAverage: " + students.get(userGitHub).getGradeAverage());
-
+        for (String gitHubUserNames : students.keySet()) {
+            System.out.print(gitHubUserNames + " ");
         }
+
+        //Start of logic for asking user what Github info they would like to see
+        boolean userconfirm = true;
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.println("\n\nWhat student would you like to see more information on?");
+            String userGitHub = scanner.nextLine();
+            if(!students.containsKey(userGitHub)){
+                System.out.println("We do not have this user in our system");
+            }
+            if (students.containsKey(userGitHub)) {
+                System.out.println("Name: " + students.get(userGitHub).getStudentName() + " - GitHub Username: " + userGitHub + "\nCurrentAverage: " + students.get(userGitHub).getGradeAverage());
+                System.out.println("Would you like to see all grades from this student? Yes/No");
+                String userAnswerAllGrades = scanner.nextLine();
+                if(userAnswerAllGrades.equalsIgnoreCase("yes")){
+                    System.out.println("Grades\n" + students.get(userGitHub).getGrade());
+                }
+                System.out.println("Would you like to see another student? Yes/No");
+                String userAnswer = scanner.nextLine();
+                if(!userAnswer.equalsIgnoreCase("yes")) { //When user types no the while becomes false.
+                    userconfirm = false;
+                }
+//                for (String gitHubUserNames : students.keySet()) { //This for loop gives user the Github names again. Need to figure out how to not run when user says no
+//                    System.out.print(gitHubUserNames + " ");
+//                }
+            }
+        } while(userconfirm);
+
+
+          //Attempt at bonus//
+//        System.out.println("Would you like to see the class average?");
+//        String userAnswerClassAverage = scanner.nextLine();
+//        if (userAnswerClassAverage.equalsIgnoreCase("yes") || userAnswerClassAverage.equalsIgnoreCase("y")){
+//            for (double i = 0; i <= 4; i++){
+//
+//            }
+//        }
+
+
     }
 }
