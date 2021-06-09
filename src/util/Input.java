@@ -56,7 +56,7 @@ public class Input {
             return Integer.parseInt(getString());
         } catch (NumberFormatException e) {
             System.out.println("Oh no! " + e.getMessage() + " There is no integer");
-           return getInt2();
+            return getInt2();
         }
     }
 
