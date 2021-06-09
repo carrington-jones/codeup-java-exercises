@@ -52,14 +52,12 @@ public class Input {
     }
 
     public int getInt2() {
-        String userInput4 = getString();
         try {
-            Integer.valueOf(userInput4);
+            return Integer.parseInt(getString());
         } catch (NumberFormatException e) {
             System.out.println("Oh no! " + e.getMessage() + " There is no integer");
-            getInt2();
+           return getInt2();
         }
-        return Integer.parseInt(userInput4);
     }
 
 
@@ -81,14 +79,13 @@ public class Input {
         return userInput6;
     }
 
-    public double getDouble2(){
-        String userInput6 = getString();
+    public double getDouble2() {
+        System.out.println("Please enter a double");
         try {
-            Double.valueOf(userInput6);
-        } catch (NumberFormatException d){
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException d) {
             System.out.println("Oh no! " + d.getMessage() + " There is no double");
-            getDouble2();
+            return getDouble2();
         }
-        return Double.parseDouble(userInput6);
     }
 }
