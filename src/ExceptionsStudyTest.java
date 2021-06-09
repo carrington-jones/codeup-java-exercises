@@ -11,6 +11,12 @@ public class ExceptionsStudyTest {
 //        }
         ExceptionsStudy study = new ExceptionsStudy();
 //        study.askForAnInteger();
-        study.aMoreComplexAskForInteger();
+//        study.aMoreComplexAskForInteger();
+        try {
+            study.echoWord();
+        } catch (IllegalArgumentException iae) {
+            System.out.println("Rude!");
+        }
     }
 }
+
